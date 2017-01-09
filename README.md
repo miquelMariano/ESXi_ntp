@@ -21,11 +21,11 @@ No dependencies
 Example Playbook
 ----------------
 
-- hosts: "{{ servers }}:!localhost"
-  user: root
-  serial: 15
-  roles:
-  - "miquelMariano.ESXi_{{ role }}"
+		- hosts: "{{ servers }}:!localhost"
+  		  user: root
+  		  serial: 15
+ 		  roles:
+ 		  - "miquelMariano.ESXi_{{ role }}"
 
 Usage
 ------
