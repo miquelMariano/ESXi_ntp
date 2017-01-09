@@ -1,0 +1,20 @@
+---
+
+##Required variables ntp1 & ntp2 defined on inventory file
+- name: Set NTP servers
+  template:
+    src=ntp.conf.j2
+    dest=/etc/ntp.conf
+
+- name: Restart NTP
+  command: /etc/init.d/ntpd restart
+
+- name: Enable NTP server
+  command: chkconfig ntpd on
+
+- name: Restart ESXi host daemon
+  command: /etc/init.d/hostd restart
+
+- include: get.yml
+
+

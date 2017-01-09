@@ -1,0 +1,9 @@
+---
+
+- name: Get NTP servers
+  command: cat /etc/ntp.conf
+  register: output
+  
+- name: Print output
+  debug: var=output.stdout_lines
+

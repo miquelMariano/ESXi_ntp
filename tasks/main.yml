@@ -1,0 +1,12 @@
+---
+# tasks file for ESXi_ntp
+#
+
+- include: get.yml 
+  tags: get
+
+- include: set.yml 
+  tags: set
+
+
+
