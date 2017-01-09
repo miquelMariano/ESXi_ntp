@@ -13,7 +13,7 @@ galaxy_tags:
     - NTP
     - miquelMariano
   
-  platforms:
+#  platforms:
   #- name: OpenBSD
   #  versions:
   #  - all
