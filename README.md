@@ -13,6 +13,25 @@ Role Variables
 
 Is necessary that variables ntp1 & ntp2 has been defined in our inventory file
 
+Example:
+		[all]
+		servers_group1
+		servers_group2
+
+		[servers_group1]
+		server1
+		server2
+		server3
+
+		[servers_group2]
+		server11
+		server12
+		server13
+
+		[all:vars]
+		ntp1='0.pool.ntp.org'
+		ntp2='1.pool.ntp.org'
+
 Dependencies
 ------------
 
