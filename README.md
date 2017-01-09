@@ -14,6 +14,7 @@ Role Variables
 Is necessary that variables ntp1 & ntp2 has been defined in our inventory file
 
 Example:
+
 		[all]
 		servers_group1
 		servers_group2
