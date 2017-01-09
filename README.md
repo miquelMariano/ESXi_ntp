@@ -25,12 +25,12 @@ Example Playbook
   user: root
   serial: 15
   roles:
-   - "miquelMariano.ESXi_{{ role }}"
+  - "miquelMariano.ESXi_{{ role }}"
 
 Usage
 ------
 
-ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=test role=ntp" --tags "set|get”
+ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=test role=ntp_config" --tags "set|get”
 
 
 License
