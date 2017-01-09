@@ -6,14 +6,14 @@
     src=ntp.conf.j2
     dest=/etc/ntp.conf
 
+- name: Restart NTP
+  command: /etc/init.d/ntpd restart
+
 - name: Enable NTP server
   command: chkconfig ntpd on
 
 - name: Restart ESXi host daemon
   command: /etc/init.d/hostd restart
-
-- name: Restart NTP
-  command: /etc/init.d/ntpd restart
 
 - include: get.yml
 
