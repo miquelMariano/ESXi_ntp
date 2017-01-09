@@ -50,7 +50,7 @@ Example Playbook
 Usage
 ------
 
-ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=test role=ntp_config" --tags "set|get”
+ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=servers_group1 role=ntp_config" --tags "set|get”
 
 
 License
