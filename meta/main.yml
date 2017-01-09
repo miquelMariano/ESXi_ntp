@@ -14,9 +14,6 @@ galaxy_tags:
     - miquelMariano
   
   platforms:
-  - name: ESXi
-    versions:
-    - 6.0
   #- name: OpenBSD
   #  versions:
   #  - all
