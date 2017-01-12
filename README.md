@@ -41,11 +41,29 @@ No dependencies
 Example Playbook
 ----------------
 
+This play is executed when update_mode var is "true" and ensure that role is up to date. By default update var is "false"
+
+miquelMariano.ESXi_{{ role }} folder must be exist. If not, the playbook not found role and fails. You shoud make dir manually "mkdir /etc/ansible/my_role"
+
+```
+		- hosts: ansible
+ 		  user: root
+ 		  tasks:
+ 		   - name: Ensure that role are up to date
+ 		     command: ansible-galaxy install --force {{ item }}
+ 		     with_items:
+ 		       - miquelMariano.ESXi_{{ role  }}
+ 		     when:
+ 		       - update_mode | default(False)
+ 		     tags: update
+ 		     ignore_errors: yes
+
 		- hosts: "{{ servers }}:!localhost"
-  		  user: root
-  		  serial: 15
+		  user: root
+ 		  serial: 15
  		  roles:
- 		  - "miquelMariano.ESXi_{{ role }}"
+ 		  - role: miquelMariano.ESXi_{{ role }}
+```
 
 Usage
 ------
