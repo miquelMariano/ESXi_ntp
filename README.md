@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role configure ntp servers in our ESXi servers
+ESXi_ntp_config configure ntp servers in our ESXi servers
 
 Requirements
 ------------
@@ -50,7 +50,7 @@ Example Playbook
 Usage
 ------
 
-ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=servers_group1 role=ntp_config" --tags "set|get”
+`ansible-playbook playbooks/ESXi_config.yml -i inventory/ESXi --extra-vars "servers=servers_group1 role=ntp_config update_mode=true" --tags "update|set|get"`
 
 
 License
